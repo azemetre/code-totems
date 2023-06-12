@@ -67,14 +67,15 @@ func main() {
 	}
 
 	version := os.Args[1]
+	filePath := os.Args[2] // Added command line argument for file path
 
 	// Make a backup before modifying the formula file
-	err := copyFile("./piscator.rb", "./piscator.rb.bak")
+	err := copyFile(filePath, filePath+".bak")
 	if err != nil {
 		log.Fatalf("failed to create backup of formula file: %v", err)
 	}
 
-	formula, err := ioutil.ReadFile("./piscator.rb")
+	formula, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		log.Fatalf("failed to read formula file: %v", err)
 	}
@@ -95,7 +96,7 @@ func main() {
 		}
 	}
 
-	err = ioutil.WriteFile("./piscator.rb", formula, 0644)
+	err = ioutil.WriteFile(filePath, formula, 0644)
 	if err != nil {
 		log.Fatalf("failed to write new formula file: %v", err)
 	}
