@@ -67,9 +67,9 @@ func main() {
 	}
 
 	version := os.Args[1]
-	filePath := os.Args[2] // Added command line argument for file path
+	filePath := os.Args[2]
 
-	// Make a backup before modifying the formula file
+	// Create backup
 	err := copyFile(filePath, filePath+".bak")
 	if err != nil {
 		log.Fatalf("failed to create backup of formula file: %v", err)
