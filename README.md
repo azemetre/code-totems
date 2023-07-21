@@ -1,6 +1,6 @@
 # Code Totems
 
-[And your touch is so diseasey, diseasey](https://www.youtube.com/watch?v=2EdGEqbwSQ0#t=34s)
+[(And your touch is so diseasey, diseasey)](https://www.youtube.com/watch?v=2EdGEqbwSQ0#t=34s)
 
 Collection of scripts written in a variety of languages
 
